@@ -1,0 +1,61 @@
+body{
+    margin: auto;
+    padding-top: 1rem;
+}
+
+.identitas{
+    width: 45rem;
+    margin: auto;
+    font-weight: bold;
+
+    
+}
+
+.judul{
+    width: 30rem;
+    margin: auto;
+    text-align: center;
+}
+
+.formulir{
+    width: 30rem;
+    margin: auto;
+    font-size: large;
+    font-weight: bold;
+    
+}
+
+.column {
+    display: flex;
+    float: left;
+    width: 50%;
+}
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+
+input{
+    width: 240px;
+    height: 26px;
+}
+
+select{
+    width: 240px;
+    height: 26px;
+}
+
+.tombol{
+    padding-top: 2rem;
+    width: 30rem;
+    margin: auto;
+}
+
+button{
+    margin: auto;
+    height: 40px;
+    width: 130px;
+}
