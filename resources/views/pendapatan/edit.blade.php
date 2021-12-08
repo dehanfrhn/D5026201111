@@ -1,11 +1,8 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<title>CRUD Tabel Pendapatan</title>
-</head>
-<body>
+@extends('layout.happy')
+@section('title','Pendapatan')
+@section('judulhalaman', 'EDIT DATA')
 
-	<h2>M Farhan Rahmandika</h2>
+@section('konten')
 	<h3>Edit Data</h3>
 
 	<a href="/pendapatan"> Kembali</a>
@@ -25,7 +22,4 @@
 		<input type="submit" value="Simpan Data">
 	</form>
 	@endforeach
-
-
-</body>
-</html>
+@endsection

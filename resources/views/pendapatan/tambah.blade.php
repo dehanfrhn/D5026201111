@@ -1,11 +1,8 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<title>CRUD Tabel Pendapatan</title>
-</head>
-<body>
+@extends('layout.happy')
+@section('title','Pendapatan')
+@section('judulhalaman', 'TAMBAH DATA')
 
-	<h2>M Farhan Rahmandika</h2>
+@section('konten')
 	<h3>Data Pendapatan</h3>
 
 	<a href="/pendapatan"> Kembali</a>
@@ -25,3 +22,4 @@
 
 </body>
 </html>
+@endsection

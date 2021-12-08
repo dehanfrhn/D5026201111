@@ -1,11 +1,8 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<title>CRUD Tabel Pendapatan</title>
-</head>
-<body>
+@extends('layout.happy')
+@section('title','Pendapatan')
+@section('judulhalaman', 'INDEX PENDAPATAN')
 
-	<h2>M Farhan Rahmandika</h2>
+@section('konten')
 	<h3>Data Pendapatan</h3>
 
 	<a href="/pendapatan/tambah"> + Tambah Data Baru</a>
@@ -36,7 +33,4 @@
 		</tr>
 		@endforeach
 	</table>
-
-
-</body>
-</html>
+@endsection
