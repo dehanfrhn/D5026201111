@@ -97,9 +97,9 @@
 
 
         <div class="breadcrumbs">
-            <div class="col-sm-12">
+            <div class="col-sm">
                 <div class="page-header float-left">
-                    <div class="page-title">
+                    <div class="page-title" style="font-size: 20px; font-weight: bold; padding-top: 15px; padding-bottom: 15px">
                         @yield('judulhalaman')
                     </div>
                 </div>
@@ -110,10 +110,12 @@
         @show
 
         <footer id="footer" class="footer">
-
-            <div class="footer">
-                <a> Hak Cipta oleh 5026201111 - M Farhan Rahmandika</a>
+            <div class="copyright" style="margin-left: 10px">
+                <h6>
+                    &copy; Hak Cipta oleh 5026201111 - M Farhan Rahmandika
+                </h6>
             </div>
+        </footer>
 
 
 

@@ -4,21 +4,22 @@
 @section('judulhalaman', 'INDEX ABSENSI')
 
 @section('konten')
-	<h3>Data Absen</h3>
-
-	<a href="/absen/tambah"> + Tambah Absen Baru</a>
+	<h4 style="margin-left: 30px">Data Absen</h4>
+	<a href="/absen/tambah" style="margin-left: 30px"> + Tambah Absen Baru</a>
 
 	<br/>
-	<br/>
-
-	<table border="1">
-		<tr>
-			<th>ID Pegawai</th>
-			<th>Tanggal</th>
-			<th>Status</th>
-			<th>Opsi</th>
-		</tr>
-		@foreach($absen as $a)
+    <div class="card-body">
+        <table class="table">
+          <thead>
+            <tr>
+              <th scope="col">ID Pegawai</th>
+              <th scope="col">Tanggal</th>
+              <th scope="col">Status</th>
+              <th scope="col">Opsi</th>
+          </tr>
+      </thead>
+      <tbody>
+        @foreach($absen as $a)
 		<tr>
 			<td>{{ $a->IDPegawai }}</td>
 			<td>{{ $a->Tanggal }}</td>
@@ -30,7 +31,9 @@
 			</td>
 		</tr>
 		@endforeach
-	</table>
+        </tbody>
+        </table>
+    </div>
     @endsection
 
 

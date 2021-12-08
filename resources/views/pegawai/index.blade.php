@@ -3,22 +3,22 @@
 @section('judulhalaman', 'INDEX PEGAWAI')
 
 @section('konten')
-	<h3>Data Pegawai</h3>
+	<h4 style="margin-left: 30px">Data Pegawai</h4>
+	<a href="/pegawai/tambah" style="margin-left: 30px"> + Tambah Pegawai Baru</a>
 
-	<a href="/pegawai/tambah"> + Tambah Pegawai Baru</a>
-
-	<br/>
-	<br/>
-
-	<table border="1">
-		<tr>
-			<th>Nama</th>
-			<th>Jabatan</th>
-			<th>Umur</th>
-			<th>Alamat</th>
-			<th>Opsi</th>
-		</tr>
-		@foreach($pegawai as $p)
+<div class="card-body">
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">Nama</th>
+          <th scope="col">Jabatan</th>
+          <th scope="col">Umur</th>
+          <th scope="col">Alamat</th>
+          <th scope="col">Opsi</th>
+      </tr>
+  </thead>
+  <tbody>
+    @foreach($pegawai as $p)
 		<tr>
 			<td>{{ $p->pegawai_nama }}</td>
 			<td>{{ $p->pegawai_jabatan }}</td>
@@ -31,5 +31,7 @@
 			</td>
 		</tr>
 		@endforeach
-	</table>
+    </tbody>
+    </table>
+</div>
 @endsection
