@@ -1,10 +1,10 @@
 
 @extends('layout.happy')
 @section('title', 'Absensi')
-@section('judulhalaman', 'INDEX ABSENSI')
+@section('judulhalaman', 'Absensi')
 
 @section('konten')
-	<h4 style="margin-left: 30px">Data Absen</h4>
+	<h4 style="margin-left: 30px ; padding-top: 10px">Data Absensi</h4>
 	<a href="/absen/tambah" style="margin-left: 30px"> + Tambah Absen Baru</a>
 
 	<br/>

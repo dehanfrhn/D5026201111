@@ -1,9 +1,9 @@
 @extends('layout.happy')
 @section('title','Pendapatan')
-@section('judulhalaman', 'INDEX PENDAPATAN')
+@section('judulhalaman', 'Pendapatan')
 
 @section('konten')
-	<h4 style="margin-left: 30px">Data Pendapatan</h4>
+	<h4 style="margin-left: 30px; padding-top: 10px">Data Pendapatan</h4>
 	<a href="/pendapatan/tambah" style="margin-left: 30px"> + Tambah Data Baru</a>
 
 	<br/>

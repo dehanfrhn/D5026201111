@@ -1,9 +1,9 @@
 @extends('layout.happy')
 @section('title','Pegawai')
-@section('judulhalaman', 'INDEX PEGAWAI')
+@section('judulhalaman', 'Pegawai')
 
 @section('konten')
-	<h4 style="margin-left: 30px">Data Pegawai</h4>
+	<h4 style="margin-left: 30px; padding-top: 10px">Data Pegawai</h4>
 	<a href="/pegawai/tambah" style="margin-left: 30px"> + Tambah Pegawai Baru</a>
 
 <div class="card-body">
