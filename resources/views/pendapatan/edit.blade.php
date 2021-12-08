@@ -8,18 +8,39 @@
 	<a href="/pendapatan" style="margin-left: 30px"> Kembali</a>
 
 	<br/>
-	<br/>
 
-	@foreach($pendapatan as $p)
-	<form action="/pendapatan/update" method="post">
-		{{ csrf_field() }}
-		<input type="hidden" name="ID" value="{{ $p->ID }}"> <br/>
-		ID Pegawai<input type="number" required="required" name="IDPegawai" value="{{ $p->IDPegawai }}"> <br/>
-		Bulan <input type="number" required="required" name="Bulan" value="{{ $p->Bulan }}"> <br/>
-		Tahun <input type="text" required="required" name="Tahun" value="{{ $p->Tahun }}"> <br/>
-        Gaji <input type="number" required="required" name="Gaji" value="{{ $p->Gaji }}"> <br/>
-        Tunjangan <input type="number" required="required" name="Tunjangan" value="{{ $p->Tunjangan }}"> <br/>
-		<input type="submit" value="Simpan Data">
-	</form>
-	@endforeach
+    <div class="card-body card-block">
+        @foreach($pendapatan as $p)
+        <form style="padding-left: 15px" action="/pendapatan/update" method="post">
+        {{ csrf_field() }}
+        <input type="hidden" name="ID" value="{{ $p->ID }}">
+        <div class="row form-group">
+            <div class="col col-md-3"><label class=" form-control-label">ID Pegawai</label></div>
+            <div class="col-12 col-md-9"><input type="number" required="required" name="IDPegawai" value="{{ $p->IDPegawai }}" class="form-control"></div>
+        </div>
+        <div class="row form-group">
+            <div class="col col-md-3"><label class=" form-control-label">Bulan</label></div>
+            <div class="col-12 col-md-9"><input type="number" required="required" name="Bulan" value="{{ $p->Bulan }}" class="form-control"></div>
+        </div>
+        <div class="row form-group">
+            <div class="col col-md-3"><label class=" form-control-label">Tahun</label></div>
+            <div class="col-12 col-md-9"><input type="text" required="required" name="Tahun" value="{{ $p->Tahun }}" class="form-control"></div>
+        </div>
+        <div class="row form-group">
+            <div class="col col-md-3"><label class=" form-control-label">Gaji</label></div>
+            <div class="col-12 col-md-9"><input type="number" required="required" name="Gaji" value="{{ $p->Gaji }}" class="form-control"></div>
+        </div>
+        <div class="row form-group">
+            <div class="col col-md-3"><label class=" form-control-label">Tunjangan</label></div>
+            <div class="col-12 col-md-9"><input type="number" required="required" name="Tunjangan" value="{{ $p->Tunjangan }}" class="form-control"></div>
+        </div>
+        <button type="submit" class="btn btn-primary btn-sm">
+            <i class="fa fa-dot-circle-o"></i> Submit
+        </button>
+        <button type="reset" class="btn btn-danger btn-sm">
+            <i class="fa fa-ban"></i> Reset
+        </button>
+        </form>
+        @endforeach
+    </div>
 @endsection
