@@ -7,7 +7,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Aplikasi Kepegawaian</title>
+    <title>Penugasan M Farhan R</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
 
@@ -36,7 +36,7 @@
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-menu" aria-controls="main-menu" aria-expanded="false" aria-label="Toggle navigation">
                     <i class="fa fa-bars"></i>
                 </button>
-                <a class="navbar-brand" style="text-align: center">Aplikasi<br>Kepegawaian</a>
+                <a class="navbar-brand" style="text-align: center">Penugasan</a>
                 <a class="navbar-brand hidden"><i class="far fa-compass"></i></a>
             </div>
 
@@ -46,6 +46,7 @@
                         <a href="/pegawai"> <i class="menu-icon fa fa-users"></i>Pegawai</a>
                         <a href="/absen"> <i class="menu-icon fa fa-calendar-check"></i>Absen</a>
                         <a href="/pendapatan"> <i class="menu-icon fa fa-money-check-alt"></i></i>Pendapatan</a>
+                        <a href="/kaos"> <i class="menu-icon fa fa-tshirt"></i></i>Kaos</a>
                     </li>
                 </ul>
             </div>
@@ -65,9 +66,9 @@
                     <div class="header-left">
                         <button class="search-trigger"><i class="fa fa-search"></i></button>
                         <div class="form-inline">
-                            <form class="search-form">
-                                <input class="form-control mr-sm-2" type="text" placeholder="Search ..." aria-label="Search">
-                                <button class="search-close" type="submit"><i class="fa fa-close"></i></button>
+                            <form class="search-form" action="/kaos/cari" method="GET">
+                                <input class="form-control mr-sm-2" name="cari" type="text" placeholder="Cari Data ..." aria-label="Search" value="{{ old('cari') }}">
+                                <button class="search-submit" type="submit" value="CARI"><i class="fa fa-search"></i></button>
                             </form>
                         </div>
                     </div>

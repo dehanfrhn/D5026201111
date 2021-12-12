@@ -69,3 +69,19 @@ Route::get('/absen/edit/{id}', 'AbsenController@edit');
 Route::post('/absen/update', 'AbsenController@update');
 
 Route::get('/absen/hapus/{id}', 'AbsenController@hapus');
+
+Route::get('/kaos', 'KaosController@index');
+
+Route::get('/kaos/tambah','kaosController@tambah');
+
+Route::post('/kaos/store','kaosController@store');
+
+Route::get('/kaos/cari','kaosController@cari');
+
+Route::get('/kaos/edit/{id}','kaosController@edit');
+
+Route::post('/kaos/update','kaosController@update');
+
+Route::get('/kaos/hapus/{id}','kaosController@hapus');
+
+Route::get('/kaos/detail/{id}','kaosController@view');
