@@ -36,12 +36,12 @@
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-menu" aria-controls="main-menu" aria-expanded="false" aria-label="Toggle navigation">
                     <i class="fa fa-bars"></i>
                 </button>
-                <a class="navbar-brand" style="text-align: center">Penugasan</a>
+                <a class="navbar-brand" style="text-align: center; font-size: 25px"><i class="far fa-compass">  Penugasan</i></a>
                 <a class="navbar-brand hidden"><i class="far fa-compass"></i></a>
             </div>
 
             <div id="main-menu" class="main-menu collapse navbar-collapse">
-                <ul class="nav navbar-nav">
+                <ul  class="nav navbar-nav">
                     <li>
                         <a href="/pegawai"> <i class="menu-icon fa fa-users"></i>Pegawai</a>
                         <a href="/absen"> <i class="menu-icon fa fa-calendar-check"></i>Absen</a>
@@ -63,11 +63,12 @@
 
                 <div class="col-sm-5">
                     <a id="menuToggle" class="menutoggle pull-left"><i class="fa fa fa-tasks"></i></a>
+
                     <div class="header-left">
-                        <button class="search-trigger"><i class="fa fa-search"></i></button>
-                        <div class="form-inline">
-                            <form class="search-form" action="/kaos/cari" method="GET">
-                                <input class="form-control mr-sm-2" name="cari" type="text" placeholder="Cari Data ..." aria-label="Search" value="{{ old('cari') }}">
+                        <button style="width: auto; font-size:20px" class="search-trigger"><i class="fa fa-search"> Pencarian</i></button>
+                        <div style="left: auto; height: 53px" class="form-inline">
+                            <form class="search-form" action="@yield('lokasi')" method="GET">
+                                <input class="form-control mr-sm-2" name="cari" type="text" placeholder="Cari Data @yield('caridata')" aria-label="Search" value="{{ old('cari') }}">
                                 <button class="search-submit" type="submit" value="CARI"><i class="fa fa-search"></i></button>
                             </form>
                         </div>

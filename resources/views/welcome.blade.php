@@ -97,6 +97,7 @@
                     <a href="/pegawai">CRUD-Pegawai</a>
                     <a href="/pendapatan">CRUD-Pendapatan</a><br>
                     <a href="/absen">CRUD-Absen</a>
+                    <a href="/kaos">CRUD-Kaos</a>
                 </div>
             </div>
         </div>

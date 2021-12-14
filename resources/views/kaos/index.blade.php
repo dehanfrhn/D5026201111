@@ -1,6 +1,8 @@
 @extends('layout.happy')
 @section('title', 'Kaos')
 @section('judulhalaman', 'Kaos')
+@section('lokasi','/kaos/cari')
+@section('caridata','kaos')
 
 @section('konten')
 	<h4 style="margin-left: 30px ; padding-top: 10px">Data Kaos</h4>

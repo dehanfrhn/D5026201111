@@ -15,8 +15,14 @@
         {{ csrf_field() }}
         <input type="hidden" name="ID" value="{{ $p->ID }}">
         <div class="row form-group">
-            <div class="col col-md-3"><label class=" form-control-label">ID Pegawai</label></div>
-            <div class="col-12 col-md-9"><input type="number" required="required" name="IDPegawai" value="{{ $p->IDPegawai }}" class="form-control"></div>
+            <div class="col col-md-3"><label class=" form-control-label">Nama Pegawai</label></div>
+            <div class="col-12 col-md-9">
+                <select id="IDPegawai" name="Nama" required="required" class="form-control">
+                    @foreach($pegawai as $peg)
+                    <option value="{{ $peg->pegawai_id }}" @if ($peg->pegawai_id === $p->IDPegawai) selected="selected" @endif> {{ $peg->pegawai_nama }}</option>
+                    @endforeach
+                </select>
+            </div>
         </div>
         <div class="row form-group">
             <div class="col col-md-3"><label class=" form-control-label">Bulan</label></div>

@@ -9,13 +9,31 @@
 
 	<br/>
 	<br/>
-
-	<form action="/pegawai/store" method="post">
-		{{ csrf_field() }}
-		Nama <input type="text" name="nama" required="required"> <br/>
-		Jabatan <input type="text" name="jabatan" required="required"> <br/>
-		Umur <input type="number" name="umur" required="required"> <br/>
-		Alamat <textarea name="alamat" required="required"></textarea> <br/>
-		<input type="submit" value="Simpan Data">
-	</form>
+    <div class="card-body card-block">
+        <form style="padding-left: 15px" action="/pegawai/store" method="post">
+        {{ csrf_field() }}
+        <div class="row form-group">
+            <div class="col col-md-3"><label class="form-control-label">Nama</label></div>
+            <div class="col-12 col-md-9"><input type="text" name="nama" required="required" class="form-control"></div>
+        </div>
+        <div class="row form-group">
+            <div class="col col-md-3"><label class=" form-control-label">Jabatan</label></div>
+            <div class="col-12 col-md-9"><input type="text" name="jabatan" required="required" class="form-control"></div>
+        </div>
+        <div class="row form-group">
+            <div class="col col-md-3"><label class=" form-control-label">Umur</label></div>
+            <div class="col-12 col-md-9"><input type="number" name="umur" required="required" class="form-control"></div>
+        </div>
+        <div class="row form-group">
+            <div class="col col-md-3"><label class=" form-control-label">Alamat</label></div>
+            <div class="col-12 col-md-9"><textarea name="alamat" required="required" class="form-control"></textarea></div>
+        </div>
+        <button type="submit" class="btn btn-primary btn-sm">
+            <i class="fa fa-dot-circle-o"></i> Submit
+        </button>
+        <button type="reset" class="btn btn-danger btn-sm">
+            <i class="fa fa-ban"></i> Reset
+        </button>
+        </form>
+    </div>
 @endsection

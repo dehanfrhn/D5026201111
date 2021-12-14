@@ -13,7 +13,7 @@ class KaosController extends Controller
         //DB::table('') -> get(); //mengembalikan array of object[][]
 
         // mengambil data dari table kaos
-        $kaos = DB::table('kaos')->paginate(5);
+        $kaos = DB::table('kaos')->orderBy('merkkaos','asc')->paginate(5);
 
         // mengirim data kaos ke view index
         return view('kaos.index', ['kaos' => $kaos]); //passing value lebih dari 1
@@ -77,7 +77,7 @@ class KaosController extends Controller
         // menghapus data kaos berdasarkan id yang dipilih
         DB::table('kaos')->where('kodekaos',$id)->delete();
         // alihkan halaman ke halaman kaos
-        return redirect('/kaos');
+        return back();
     }
 
     public function view($id){

@@ -1,6 +1,8 @@
 @extends('layout.happy')
 @section('title','Pendapatan')
 @section('judulhalaman', 'Pendapatan')
+@section('lokasi','/pendapatan/cari')
+@section('caridata','Pendapatan')
 
 @section('konten')
 	<h4 style="margin-left: 30px; padding-top: 10px">Data Pendapatan</h4>
@@ -12,7 +14,7 @@
     <table class="table">
       <thead>
         <tr>
-          <th scope="col">ID Pegawai</th>
+          <th scope="col">Nama</th>
           <th scope="col">Bulan</th>
           <th scope="col">Tahun</th>
           <th scope="col">Gaji</th>
@@ -23,7 +25,7 @@
   <tbody>
     @foreach($pendapatan as $p)
     <tr>
-        <td>{{ $p->IDPegawai }}</td>
+        <td>{{ $p->pegawai_nama }}</td>
         <td>{{ $p->Bulan }}</td>
         <td>{{ $p->Tahun }}</td>
         <td>{{ $p->Gaji }}</td>
@@ -37,6 +39,11 @@
     @endforeach
     </tbody>
     </table>
+    <a style="margin-left: 12px ; ">Halaman : {{ $pendapatan->currentPage() }}</a> <br/>
+	<a style="margin-left: 12px ; ">Jumlah Data : {{ $pendapatan->total() }}</a> <br/>
+    <a style="margin-left: 12px ; ">Data Per Halaman : {{ $pendapatan->perPage() }}</a> <br/>
+    <br>
+    {{$pendapatan->links() }}
 </div>
 @endsection
 

@@ -1,6 +1,8 @@
 @extends('layout.happy')
 @section('title','Pegawai')
 @section('judulhalaman', 'Pegawai')
+@section('lokasi','/pegawai/cari')
+@section('caridata','pegawai')
 
 @section('konten')
 	<h4 style="margin-left: 30px; padding-top: 10px">Data Pegawai</h4>
@@ -32,6 +34,11 @@
 		</tr>
 		@endforeach
     </tbody>
+
     </table>
+    <a style="margin-left: 12px ; ">Halaman : {{ $pegawai->currentPage() }}</a> <br/>
+	<a style="margin-left: 12px ; ">Jumlah Data : {{ $pegawai->total() }}</a> <br/>
+    <a style="margin-left: 12px ; ">Data Per Halaman : {{ $pegawai->perPage() }}</a> <br/>        <br>
+    {{ $pegawai->links() }}
 </div>
 @endsection

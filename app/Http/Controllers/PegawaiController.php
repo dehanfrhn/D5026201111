@@ -13,12 +13,21 @@ class PegawaiController extends Controller
         //DB::table('') -> get(); //mengembalikan array of object[][]
 
         // mengambil data dari table pegawai
-        $pegawai = DB::table('pegawai')->get();
+        $pegawai = DB::table('pegawai')->orderBy('pegawai_nama','asc')->paginate(5);
 
         // mengirim data pegawai ke view index
         return view('pegawai.index', ['pegawai' => $pegawai]); //passing value lebih dari 1
 
     }
+
+    public function cari(Request $request)
+	{
+		$cari = $request->cari;
+		$pegawai = DB::table('pegawai')
+		->where('pegawai_nama','like',"%".$cari."%")
+		->paginate(5);
+		return view('pegawai.index',['pegawai' => $pegawai]);
+	}
 
     // method untuk menampilkan view form tambah pegawai
     public function tambah()
@@ -72,6 +81,6 @@ class PegawaiController extends Controller
         DB::table('pegawai')->where('pegawai_id', $id)->delete();
 
         // alihkan halaman ke halaman pegawai
-        return redirect('/pegawai');
+        return back();
     }
 }

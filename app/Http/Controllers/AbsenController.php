@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use Illuminate\Database\Console\Migrations\RefreshCommand;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
@@ -11,11 +12,26 @@ class AbsenController extends Controller
     public function index()
     {
         // mengambil data dari table absen
-        $absen = DB::table('absen')->get();
+        $absen = DB::table('absen')
+        ->join('pegawai', 'absen.IDPegawai', '=', 'pegawai.pegawai_id')
+        ->select('absen.*', 'pegawai.pegawai_nama')
+        ->paginate(5);
 
         // mengirim data absen ke view index
         return view('absen.index', ['absen' => $absen]);
     }
+
+    //fungsi untuk cari
+    public function cari(Request $request)
+	{
+		$cari = $request->cari;
+        $absen = DB::table('absen')
+        ->join('pegawai', 'absen.IDPegawai', '=', 'pegawai.pegawai_id')
+        ->select('absen.*', 'pegawai.pegawai_nama')
+		->where('pegawai_nama','like',"%".$cari."%")
+		->paginate(5);
+		return view('absen.index',['absen' => $absen]);
+	}
 
     // method untuk menampilkan view form tambah absen
     public function tambah()
@@ -30,7 +46,7 @@ class AbsenController extends Controller
     {
         // insert data ke table absen
         DB::table('absen')->insert([
-            'IDPegawai' => $request->idpegawai,
+            'IDPegawai' => $request->IDPegawai,
             'Tanggal' => $request->tanggal,
             'Status' => $request->status
         ]);
@@ -72,7 +88,7 @@ class AbsenController extends Controller
         // menghapus data pegawai berdasarkan id yang dipilih
         DB::table('absen')->where('ID', $id)->delete();
 
-        // alihkan halaman ke halaman absen
-        return redirect('/absen');
+        // alihkan reload
+        return back();
     }
 }

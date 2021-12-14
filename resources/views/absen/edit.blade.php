@@ -6,7 +6,7 @@
 
     <h4 style="margin-left: 30px; padding-top: 10px">Edit Data Absen</h4>
 	<a href="/absen" style="margin-left: 30px"> Kembali</a>
-
+    <br>
     <div class="card-body card-block">
         @foreach($absen as $a)
         <form style="padding-left: 15px" action="/absen/update" method="post">
