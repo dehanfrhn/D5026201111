@@ -10,7 +10,7 @@
         <tr>
             <th scope="col">Anda pengunjung ke:</th>
             @foreach($pagecounter as $p)
-            <th scope="col">{{ $p->Jumlah }}</th>
+            <th scope="col">{{ $p->Jumlah+1 }}</th>
             @endforeach
       </tr>
     </table>
