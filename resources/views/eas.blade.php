@@ -9,8 +9,9 @@
     <table class="table">
         <tr>
             <th scope="col">Anda pengunjung ke:</th>
-            <th scope="col">{{ $pagecounter->total() }}</th>
-
+            @foreach($pagecounter as $p)
+            <th scope="col">{{ $p->Jumlah }}</th>
+            @endforeach
       </tr>
     </table>
 </div>

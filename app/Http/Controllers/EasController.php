@@ -13,11 +13,7 @@ class EasController extends Controller
     	// mengambil data dari table pagecounter
         $pagecounter = DB::table('pagecounter')->paginate(2);
 
-        DB::table('pagecounter')->insert([
-            'Jumlah' => $request->Jumlah+1
-        ]);
-
-    	// mengirim data pagecounter ke view index
+        DB::table('pagecounter')->increment('Jumlah');
     	return view('eas',['pagecounter' => $pagecounter]);
 
     }
