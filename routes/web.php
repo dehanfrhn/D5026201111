@@ -91,3 +91,5 @@ Route::post('/kaos/update','kaosController@update');
 Route::get('/kaos/hapus/{id}','kaosController@hapus');
 
 Route::get('/kaos/detail/{id}','kaosController@view');
+
+Route::get('/eas','EasController@index');

@@ -47,6 +47,7 @@
                         <a href="/absen"> <i class="menu-icon fa fa-calendar-check"></i>Absen</a>
                         <a href="/pendapatan"> <i class="menu-icon fa fa-money-check-alt"></i></i>Pendapatan</a>
                         <a href="/kaos"> <i class="menu-icon fa fa-tshirt"></i></i>Kaos</a>
+                        <a href="/eas"> <i class="menu-icon fas fa-user-graduate"></i></i>EAS</a>
                     </li>
                 </ul>
             </div>
